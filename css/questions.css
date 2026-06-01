@@ -37,6 +37,13 @@ body {
     background-color: #E8C698;
   }
 
+  .home-icon {
+    width: 45px;
+    height: 45px;
+    margin-left: 20px;
+    margin-top: 15px;
+  }
+
   .home-main {
     display:flex; 
     flex-direction: row; 
@@ -72,5 +79,5 @@ body {
   }
 
   .quiz-background {
-    width: 90%;
+    width: 100%;
   }
