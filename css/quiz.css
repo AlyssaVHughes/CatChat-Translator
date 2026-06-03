@@ -51,3 +51,44 @@ body {
     align-items: center;
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); */
 }
+
+.quiz-main {
+    display:flex; 
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; 
+}
+
+.quiz-header {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.small_heart_2 {
+    width: 54px;
+    height: 40px;
+}
+
+.quiz-header-text {
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 104px;
+    color: #8A834C;
+    margin: 0;
+}
+
+.quiz-buttons {
+    margin-top: 45px;;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width:65%;
+}
