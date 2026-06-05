@@ -108,10 +108,10 @@
     display: block;
 }
 
-  .box-text {
+  #box-text {
         position: absolute;
         top: 50%;
-        left: 56%;
+        left: 52%;
 
         transform: translate(-50%, -50%);
 
@@ -122,7 +122,7 @@
         font-size: 29px;
         color: #6E5340;
         line-height: .8;
-        width: 465px;
+        width: 435px;
   }
 
   .quiz-text-box-container {
@@ -136,7 +136,7 @@
   display: block;
 }
 
-.quiz-box-text {
+#quiz-box-text {
       position: absolute;
       top: 50%;
       left: 50%;
