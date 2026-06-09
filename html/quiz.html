@@ -13,6 +13,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet"></head>
 <body>
+<div class="layered-background">
+    <div class="arrow-buttons">
+        <img class="arrow-button" src="../images/icons/arrow_left.png" alt="Left Arrow">
+        <img class="arrow-button" src="../images/icons/arrow_right.png" alt="Right Arrow">
+    </div>
+    <img class="background-layer" src="../images/decor/cloud_background.png" alt="Background Layer">
+    <div class="layered-effect"></div>
+<div class ="quiz-app">
     <div class="card-container">
         <div class="card-active">
             <div class="question-header">
@@ -21,44 +29,58 @@
                         <a href="../html/start.html">
                             <img class="home-icon" src="../images/icons/home_icon.jpg" alt="Home Icon">
                         </a>
+                        <div class="button-container">
+                            <img class="restart-button" src="../images/buttons/button_b.png" alt="Restart Button">
+                            <img class="restart-button-hover" src="../images/buttons/button_b2.png">
+                            <h1 class="restart-button-text">Restart</h1>
+                        </div>
                     </div>
                 </div>
                 <div class="question-header-shadow"></div>
             </div>
-            <div class="quiz-main">
-                <div class="quiz-header"> 
-                    <img class="small_heart_2" src="../images/decor/small_heart_2.png" alt="Small Heart">
-                    <h1 class="quiz-header-text">Question 1</h1>
-                    <img class="small_heart_2" src="../images/decor/small_heart_2.png" alt="Small Heart">
-                </div>
-                <div class="quiz-main-content">
-                        <div class="question-background-2"> 
-                            <img class="quiz-background" src="../images/decor/quiz_background_2.png" alt="Question Image">
-                        </div>
-                    <div class="quiz-content-container">
-                        <div class="quiz-text-box-container">
-                            <p id="quiz-box-text"></p>
-                            <img class="quiz-text-box" src="../images/UI/quiz_text_box.png" alt="Text Box">
-                        </div>
-                        <div class="quiz-lower-content">
-                            <img class="quiz-character" src="../images/characters/Catrina.png" alt="Quiz Cat">
-                            <div class="answer-container">
-                                <div class="answer-content">
-                                    <p class="answer-text">My cat's name is:</p>
-                                    <input type="text" placeholder="Enter name">
+                <div class="quiz-container"> 
+                        <img class="quiz-main-decor" src="../images/decor/quiz_decor.png" alt="Main Decor">
+                    <div class="quiz-main">
+                    <div class="quiz-header"> 
+                        <img class="small_heart_2" src="../images/decor/small_heart_2.png" alt="Small Heart">
+                        <h1 class="quiz-header-text">Question 1</h1>
+                        <img class="small_heart_2" src="../images/decor/small_heart_2.png" alt="Small Heart">
+                    </div>
+                    <div class="quiz-main-content">
+                            <div class="question-background-2"> 
+                                <img class="quiz-background" src="../images/decor/quiz_background_2.png" alt="Question Image">
+                            </div>
+                        <div class="quiz-content-container">
+                            <div class="quiz-text-box-container">
+                                <p id="quiz-box-text"></p>
+                                <img class="quiz-text-box" src="../images/UI/quiz_text_box.png" alt="Text Box">
+                            </div>
+                            <div class="quiz-lower-content">
+                                <img class="quiz-character" src="../images/characters/Catrina.png" alt="Quiz Cat">
+                                <div class="answer-container">
+                                    <div class="answer-content">
+                                        <p class="answer-text">My cat's name is:</p>
+                                        <input type="text" placeholder="Enter name">
+                                        <div class="button-container">
+                                            <img class="restart-button" src="../images/buttons/button_b.png" alt="Restart Button">
+                                            <img class="restart-button-hover" src="../images/buttons/button_b2.png">
+                                            <h1 class="restart-button-text">Save</h1>
+                                        </div>
+                                    </div>
+                                    <img class="answer-box" src="../images/UI/quiz_background.png" alt="Answer Box">
                                 </div>
-                                <img class="answer-box" src="../images/UI/quiz_background.png" alt="Answer Box">
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="quiz-buttons">
-                    <div class="button-container">
-                        <img class="button" src="../images/buttons/button_f.png" alt="Start Button">
-                        <img class="button-hover" src="../images/buttons/button_f2.png">
-                        <h1 class="button-f-text">Next</h1>
+                    <div class="quiz-buttons">
+                        <div class="button-container">
+                            <!-- <img class="button" src="../images/buttons/button_f.png" alt="Start Button">
+                            <img class="button-hover" src="../images/buttons/button_f2.png">
+                            <h1 class="button-f-text">Next</h1> -->
+                        </div>
                     </div>
                 </div>
+                <img class="quiz-main-decor" src="../images/decor/quiz_decor.png" alt="Main Decor">
             </div>
         </div>
         <!-- <div class="card">
@@ -116,5 +138,16 @@
         <div class="card">
         </div> -->
     </div>
+    <div class ="quiz-navigation">
+        <img class="position-marker" src="../images/UI/on_position_incomplete.png" alt="Position Marker">
+        <img class="position-marker" src="../images/UI/position_incomplete.png" alt="Position Marker">
+        <img class="position-marker" src="../images/UI/position_incomplete.png" alt="Position Marker">
+        <img class="position-marker" src="../images/UI/position_complete.png" alt="Position Marker">
+        <img class="position-marker" src="../images/UI/position_incomplete.png" alt="Position Marker">
+        <img class="position-marker" src="../images/UI/position_incomplete.png" alt="Position Marker">
+        <img class="position-marker" src="../images/UI/position_complete.png" alt="Position Marker">
+    </div>
+</div>
+</div>
 </body>
 </html>
