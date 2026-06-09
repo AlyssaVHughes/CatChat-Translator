@@ -34,3 +34,12 @@ if (questionText) {
         "What is your cat's name?"
     );
 }
+
+const questionText2 = document.getElementById("quiz-box-text2");
+
+if (questionText2) {
+    typeWriter(
+        questionText,
+        "What color is closest to your cat?"
+    );
+}
