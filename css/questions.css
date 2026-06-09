@@ -29,12 +29,12 @@ body {
 }
   .question-header-top{ 
     height: 55px;
-    background-color: #FFDBAA;
+    background-color: #f4ecd0;
   }
 
   .question-header-shadow {
-    height: 8px;
-    background-color: #E8C698;
+    height: 7px;
+    background-color: #cbbe92;
   }
 
   .home-main {

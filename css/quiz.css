@@ -8,6 +8,20 @@ body {
   
     background: #FFECDB;
   }
+
+  .quiz-container {
+    display:flex; 
+    flex-direction: row; 
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .quiz-main-decor {
+    height: 650px;
+    width: 35px;
+    padding-top: 122px;
+    opacity: 0.7;
+  }
   
   .card-container{
     position: relative;
@@ -21,14 +35,17 @@ body {
     box-sizing: border-box;
     padding-bottom: 70px;
     border-radius: 10px;
+
+    position: absolute;
   
-    background: #EADBA9;
+    background: #efe0b1;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 3;
   }
 
   .card {
@@ -43,7 +60,7 @@ body {
     padding-bottom: 70px;
     border-radius: 10px;
   
-    background: #EADBA9;
+    background: #f0e1b1;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -56,6 +73,7 @@ body {
     display:flex; 
     flex-direction: column;
     justify-content: space-between;
+    gap: 20px;
     align-items: center;
     width: 100%; 
 }
@@ -66,13 +84,12 @@ body {
     justify-content: space-between;
     align-items: center;
     width:70%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 40px;
 }
 
 .small_heart_2 {
-    width: 54px;
-    height: 40px;
+    width: 44px;
+    height: 30px;
 }
 
 .quiz-header-text {
@@ -80,8 +97,9 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 90px;
-    color: #8A834C;
+    color: #aba476;
     margin: 0;
+    line-height: 0%;
 }
 
 .quiz-buttons {
@@ -122,33 +140,29 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 30px 0px 30px 10px;
+    padding: 0px 0px 0px 10px;
 }
 
 .quiz-character {
     width: auto;
-    height: 300px;
+    height: 335px;
 }
 
 .answer-container {
     position: relative;
     display: inline-block;
-    /* display:flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; */
     width: 270px;
     height: 340px;
-    /* background-color: white; */
 }
 
 .answer-content {
     position: absolute;
     display: flex;
-    gap: 30px;
+    gap: 10px;
     flex-direction: column;
     align-items: center;
-    top: 8%;
+    justify-content: center;
+    /* top: 8%; */
     left: 0;
     width: 100%;
     height: 100%;
@@ -161,28 +175,96 @@ body {
     font-weight: 400;
     font-style: normal;
     font-size: 29px;
-    color: #6E5340;
+    color: #917765;
 }
 
 .answer-box {
     display: block;
     width: 100%;
+    margin-bottom: 20px;;
 }
 
 input {
-    width: 160px;
-    padding: 10px 16px;
+    width: 165px;
+    padding: 7px 16px;
 
-    border: 3px solid #93906B;
+    border: 3px solid #b1ae88;
     border-radius: 0px;
 
     font-size: 1rem;
 
-    background-color: #f4f7e2;
+    background-color: #f8fbe9;
 }
 
 input:focus {
     outline: none;
     border-color: #FFB480;
     background-color: #fce8cd;
+}
+
+.quiz-app {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quiz-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    width: 27%;
+}
+
+.position-marker {
+    width: 40px;
+}
+
+.layered-background {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+.layered-effect {
+    position: absolute;
+    top: 12%;
+    left: 24%;
+    width: 940px;
+    height: 660px;
+    background-color: #c9be99;
+    border-radius: 5px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.background-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto; 
+    z-index: 1;
+}
+
+.arrow-buttons {
+    position: absolute;
+    top: 12%;
+    left: 24%;
+    width: 880px;
+    height: 700px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 30px;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.arrow-button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
 }
