@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Page Title</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/quiz.css">
     <link rel="stylesheet" href="../css/questions.css">
     <link rel="stylesheet" href="../css/components.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet">
 </head>
 <body>
+<div class="layered-background">
+    <img class="background-layer" src="../images/decor/cloud_background.png" alt="Background Layer">
     <div class="question-app">
         <div class="question-header">
             <div class="question-header-top">
@@ -30,8 +33,12 @@
                     <p id="box-text"></p>
                     <img class="text-box" src="../images/UI/text_box.png" alt="Text Box">
                 </div>
-                <div class="question-background"> 
-                    <img class="quiz-background" src="../images/decor/quiz_background.png" alt="Question Image">
+                <div class="question-layers">
+                    <div class="question-background"> 
+                        <img class="quiz-background" src="../images/decor/quiz_background.png" alt="Question Image">
+                    </div>
+                    <img class="quiz-character-a" src="../images/characters/Catrina.png" alt="Quiz Cat">
+                    <img class="catrina-decor" src="../images/decor/sparkle_1.png" alt="Catrina Decor">
                 </div>
                 <a href="../html/quiz.html" class="start-link">
                     <div class="button-container">
@@ -44,6 +51,7 @@
             <img class="home-main-decor" src="../images/decor/quiz_decor.png" alt="Main Decor">
         </div>
     </div>
+</div>
 </body>
 
 </html>
