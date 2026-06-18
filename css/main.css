@@ -13,6 +13,8 @@ body {
     width: 729px;
     height: 871px;
     border-radius: 10px;
+
+    position: relative;
   
     background: #B8AA79;
     overflow: hidden;
@@ -99,5 +101,46 @@ body {
     font-size: 80px;
     color: #6D351F;
   }
+
+  .small-heart-container {
+    position: relative;
+    width: 44px;
+    height: 50px;
+  }
+
+  .small_heart {
+    position: absolute;
+    inset: 0;
+  }
+
+
+  .sh1 {
+    animation: heartframe 1s steps(1) infinite;
+}
+
+  .sh2 {
+    top: 20px;
+    animation: heartframe2 1s steps(1) infinite;
+}
+
+@keyframes heartframe {
+  0%, 49% {
+      opacity: 1;
+  }
+
+  50%, 100% {
+      opacity: 0;
+  }
+}
+
+@keyframes heartframe2 {
+  0%, 49% {
+      opacity: 0;
+  }
+
+  50%, 100% {
+      opacity: 1;
+  }
+}
 
   

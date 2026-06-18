@@ -190,3 +190,35 @@
       line-height: .8;
       width: 350px;
 }
+
+.layered-background {
+  position: relative;
+  width: 100%;
+  height: auto;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.background-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 100%; 
+  z-index: 0;
+  overflow: hidden;
+  animation: sway 8s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0% {
+      transform: translateX(0px);
+  }
+  50% {
+      transform: translateX(80px);
+  }
+  100% {
+      transform: translateX(0px);
+  }
+}
