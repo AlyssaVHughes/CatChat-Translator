@@ -72,8 +72,8 @@ body {
 .quiz-main {
     display:flex; 
     flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
+    justify-content: flex-start;
+    gap: 10px;
     align-items: center;
     width: 100%; 
 }
@@ -113,7 +113,7 @@ body {
 }
 
 .quiz-main-content {
-    margin-top: 20px;
+    margin-top: 40px;
     width: 90%;
     height: 500px;
     position: relative;
@@ -145,7 +145,7 @@ body {
 
 .quiz-character {
     width: auto;
-    height: 335px;
+    height: 345px;
 }
 
 .answer-container {
@@ -216,13 +216,18 @@ input:focus {
     gap: 25px;
     padding-top: 30px;
     width: 100%;
+
+    position: absolute;
+    align-items: center;
+    z-index: 5;
+    top: 760px;
 }
 
 .position-marker {
     width: 30px;
 }
 
-.layered-effect {
+/* .layered-effect {
     width: 929px;
     height: 660px;
     margin-top: 100px;
@@ -240,11 +245,11 @@ input:focus {
     align-items: center;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
     z-index: 1;
-}
+} */
 
 .arrow-buttons {
     position: absolute;
-    width: 870px;
+    width: 900px;
     height: 660px;
     display: flex;
     margin-top: 100px;
@@ -255,7 +260,7 @@ input:focus {
 }
 
 .arrow-button {
-    width: 40px;
-    height: 40px;
+    width: 66px;
+    height: 58px;
     cursor: pointer;
 }
