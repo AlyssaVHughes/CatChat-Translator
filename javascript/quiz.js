@@ -1,3 +1,5 @@
+let currentQuestion = 0;
+
 const questions = [
     {
         title: "Question 1",
@@ -14,7 +16,7 @@ const questions = [
         title: "Question 3",
         question: "Your cat sees you open the food cabinet. What is their reaction?",
         type: "radio",
-        options: ["Waits Politely", "Screams for food", "Immediatley eats what it can", "Walks away unbothered", "", "Looks at you lonvingly"]
+        options: ["Waits Politely", "Screams for food", "Immediatley eats what it can", "Walks away unbothered", "", "Looks at you lovingly"]
     },
     {
         title: "Question 4",
@@ -47,3 +49,61 @@ const questions = [
         options: ["Hidden and alone", "Perfectly curled up", "On your face", "Like royalty", "They don't", "Soft and tiny"]
     },
 ];
+
+function renderQuestion() {
+    const current = questions[currentQuestion];
+
+    document.getElementById("question-title").textContent =
+        current.title;
+
+    document.getElementById("question-text").textContent =
+        current.question;
+
+    renderInput(current);
+};
+
+function renderInput(question) {
+
+    const answerArea = document.getElementById("answer-area");
+
+    if (question.type === "text") {
+
+        answerArea.innerHTML = `
+            <input type="text" id="answer-input">
+        `;
+
+    } else if (question.type === "radio") {
+
+        let html = "";
+
+        question.options.forEach(option => {
+            html += `
+                <label>
+                    <input
+                        type="radio"
+                        name="quiz-answer"
+                        value="${option}">
+                    ${option}
+                </label>
+            `;
+        });
+
+        answerArea.innerHTML = html;
+    }
+};
+
+renderQuestion();
+
+function nextQuestion() {
+    if (currentQuestion < questions.length - 1) {
+        currentQuestion++;
+        renderQuestion();
+    }
+}
+
+function previousQuestion() {
+    if (currentQuestion > 0) {
+        currentQuestion--;
+        renderQuestion();
+    }
+}
