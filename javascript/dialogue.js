@@ -1,4 +1,33 @@
+let currentTimeout; 
+
 function typeWriter(element, text, speed = 25) {
+
+if (!element) return;
+
+//stop any animation already in progress
+clearTimeout(currentTimeout); 
+
+element.textContent = ""; 
+
+let index = 0; 
+
+function type() {
+    if(index < text.length) { 
+        element.textContent += text.charAt(index);
+        index++;
+
+        currentTimeout = setTimeout(type, speed);
+    }
+}
+type();
+
+}
+
+
+
+
+
+/*function typeWriter(element, text, speed = 25) {
 
     if (!element) return;
 
@@ -42,4 +71,4 @@ if (questionText2) {
         questionText,
         "What color is closest to your cat?"
     );
-}
+}*/ 
