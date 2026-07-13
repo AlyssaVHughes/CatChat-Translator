@@ -14,7 +14,7 @@ const questions = [
         title: "Question 3",
         question: "Your cat sees you open the food cabinet. What is their reaction?",
         type: "radio",
-        options: ["Waits Politely", "Screams for food", "Immediatley eats what it can", "Walks away unbothered", "", "Looks at you lovingly"]
+        options: ["Waits Politely", "Screams for food", "Instantly tries to eat", "Walks away unbothered", "", "Looks at you lovingly"]
     },
     {
         title: "Question 4",
