@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Page Title</title>
+    <script src="../javascript/quizData.js" defer></script>
     <script src="../javascript/dialogue.js" defer></script>
+    <script src="../javascript/quiz.js" defer></script>
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/quiz.css">
     <link rel="stylesheet" href="../css/questions.css">
@@ -15,8 +17,8 @@
 <body>
 <div class="layered-background">
     <div class="arrow-buttons">
-        <img class="arrow-button" src="../images/buttons/arrow_left.png" alt="Left Arrow">
-        <img class="arrow-button" src="../images/buttons/arrow_right.png" alt="Right Arrow">
+        <img id="left-arrow" class="arrow-button" src="../images/buttons/arrow_left.png" alt="Left Arrow">
+        <img id="right-arrow" class="arrow-button" src="../images/buttons/arrow_right.png" alt="Right Arrow">
     </div>
     <img class="background-layer" src="../images/decor/cloud_background.png" alt="Background Layer">
     <div class ="quiz-navigation">
@@ -52,7 +54,7 @@
                     <div class="quiz-main">
                     <div class="quiz-header"> 
                         <img class="small_heart_2" src="../images/decor/small_heart_2.png" alt="Small Heart">
-                        <h1 id= question-title class="quiz-header-text">Question 1</h1>
+                        <h1 id= question-title class="quiz-header-text"></h1>
                         <img class="small_heart_2" src="../images/decor/small_heart_2.png" alt="Small Heart">
                     </div>
                     <div class="quiz-main-content">

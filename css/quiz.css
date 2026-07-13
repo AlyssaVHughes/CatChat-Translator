@@ -184,7 +184,7 @@ body {
     margin-bottom: 20px;;
 }
 
-input {
+input[type="text"] {
     width: 165px;
     padding: 7px 16px;
 
@@ -196,10 +196,29 @@ input {
     background-color: #f8fbe9;
 }
 
-input:focus {
+input:focus[type="text"] {
     outline: none;
     border-color: #FFB480;
     background-color: #fce8cd;
+}
+
+.radio-option {
+    font-family: "Micro 5", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #917765;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    cursor: pointer;
+}
+
+.radio-option input[type="radio"] {
+    accent-color: #FFB480;
+    width: 20px;
+    height: 20px;
 }
 
 .quiz-app {
