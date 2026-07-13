@@ -66,7 +66,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); */
 }
 
 .quiz-main {
@@ -153,19 +152,22 @@ body {
     display: inline-block;
     width: 270px;
     height: 340px;
+    display: flex;
+    justify-content: center;
 }
 
 .answer-content {
     position: absolute;
     display: flex;
-    gap: 10px;
+    gap: 13px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     /* top: 8%; */
-    left: 0;
-    width: 100%;
+    width: 80%;
     height: 100%;
+    /* padding-left: 30px; */
+    /* padding-right: 10px;  */
 }
 
 .answer-text{
@@ -181,7 +183,7 @@ body {
 .answer-box {
     display: block;
     width: 100%;
-    margin-bottom: 20px;;
+    /* margin-bottom: 20px; */
 }
 
 input[type="text"] {
@@ -204,9 +206,10 @@ input:focus[type="text"] {
 
 .radio-option {
     font-family: "Micro 5", sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 600;
     color: #917765;
+    padding-top: 5px;
 
     display: flex;
     align-items: center;
