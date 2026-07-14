@@ -44,8 +44,8 @@ function renderInput(question) {
                     <input
                         type="radio"
                         name="quiz-answer"
-                        value="${option}">
-                    ${option}
+                        value="${option.personality}">
+                    ${option.text}
                 </label>
             `;
         });
@@ -57,8 +57,41 @@ function renderInput(question) {
 //call the renderQuestion function to display the first question when the page loads.
 renderQuestion();
 
+//save button logic
+const saveButton =
+    document.getElementById("save-button");
+const answers = {}; 
 
+saveButton.addEventListener("click", saveQuestion);
 
+function saveQuestion() {
+
+    console.log("Save button clicked!");
+    const question = questions[currentQuestion];
+
+    if (question.type === "text") { 
+
+        const input = document.getElementById("answer-input");
+        answers [currentQuestion] = input.value;
+    } else if (question.type === "radio") {
+
+        //stores the object associated with the selected radio button
+        const selected = document.querySelector(
+            'input[name="quiz-answer"]:checked'
+        );
+
+        if (!selected) {
+            alert("Please select an answer first.");
+            return;
+        }
+        answers[currentQuestion] = selected.value;
+    } 
+
+    console.log (answers);
+    nextQuestion();
+}
+
+//arrow button logic
 const leftArrow = document.getElementById("left-arrow");
 const rightArrow = document.getElementById("right-arrow");
 
