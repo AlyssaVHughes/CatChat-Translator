@@ -2,6 +2,9 @@
 let currentQuestion = 0;
 const answers = {}; 
 
+const leftArrow = document.getElementById("left-arrow-container");
+const rightArrow = document.getElementById("right-arrow-container");
+
 function renderQuestion() {
 
 //look inside of the questions array and get the question object that corresponds to the currentQuestion index. Store that question object in a variable called current.
@@ -25,7 +28,22 @@ function renderInput(question) {
 
     //get the element with the id "answer-area" and store it in a variable called answerArea. This is where the input field will be rendered.
     const answerArea = document.getElementById("answer-area");
+    const saveButton = document.getElementById("save-button");
 
+    if (currentQuestion === questions.length - 1) {
+        answerArea.innerHTML = `
+            <div id="submit-button-container" class="button-container">
+                <img class="submit-button" src="../images/buttons/button_f.png" alt="Restart Button">
+                <img class="submit-button-hover" src="../images/buttons/button_f2.png">
+                <h1 class="submit-button-text">Submit</h1>
+            </div>
+        `;
+        const submitButton = document.getElementById("submit-button-container");
+        submitButton.addEventListener("click", submitQuiz);  
+
+        saveButton.style.display = "none";
+
+    } else
 
     if (question.type === "text") {
 
@@ -70,6 +88,8 @@ function renderInput(question) {
             }
         }
     }
+    updateArrows();
+    updateNavigation();
 };
 
 //call the renderQuestion function to display the first question when the page loads.
@@ -106,13 +126,11 @@ function saveQuestion() {
     } 
 
     console.log (answers);
-    nextQuestion();
+    updateNavigation();
+    //nextQuestion();
 }
 
 //arrow button logic
-const leftArrow = document.getElementById("left-arrow");
-const rightArrow = document.getElementById("right-arrow");
-
 leftArrow.addEventListener("click", previousQuestion);
 
 rightArrow.addEventListener("click", nextQuestion);
@@ -129,4 +147,57 @@ function previousQuestion() {
         currentQuestion--;
         renderQuestion();
     }
+}
+
+
+//show and hide the arrows based on the current question index
+function updateArrows() {
+
+    if (currentQuestion === 0) {
+        leftArrow.style.visibility = "hidden";
+    }
+    else {
+        leftArrow.style.visibility = "visible";
+    }
+
+    if (currentQuestion === questions.length - 1) {
+        rightArrow.style.visibility = "hidden";
+    }
+    else {
+        rightArrow.style.visibility = "visible";
+    }
+}
+
+function updateNavigation() { 
+
+    const markers = document.querySelectorAll(".position-marker");
+    markers.forEach((marker,index) => { 
+
+        if (index === currentQuestion) {
+            if (answers[index]) {
+                marker.src = "../images/UI/on_position_complete.png";
+            }
+            else {
+                marker.src = "../images/UI/on_position_incomplete.png";
+            }
+        }
+        else if (answers[index]) {
+            marker.src = "../images/UI/marker_green.png";
+        }
+        
+        else {
+            marker.src = "../images/UI/marker_red.png";
+        }
+
+    });
+}
+
+//submit button logic
+function submitQuiz() {
+
+    if (Object.keys(answers).length < questions.length) {
+        alert("Please answer all questions before submitting.");
+        return;
+    }
+    console.log("Quiz submitted!", answers);
 }
