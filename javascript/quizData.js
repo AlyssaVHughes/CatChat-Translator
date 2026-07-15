@@ -152,5 +152,13 @@ const questions = [
         {   text: "Waits patiently",
                 personality: "Gentlecat"},
         ]
+    },
+    {
+        title: "Finish",
+        question: "Are you ready to submit your answers?",
+        type: "button",
+        options: [
+           { text: "Submit", }
+        ]
     }
 ];

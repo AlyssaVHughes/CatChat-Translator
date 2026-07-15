@@ -1,5 +1,6 @@
 //bookmark that tracks the current question index
 let currentQuestion = 0;
+const answers = {}; 
 
 function renderQuestion() {
 
@@ -29,8 +30,12 @@ function renderInput(question) {
     if (question.type === "text") {
 
         //if the type of the current question is "text", set the innerHTML of the answerArea element to be an input field of type text with the id "answer-input". This will allow the user to type in their answer.
-        answerArea.innerHTML = 
-        `<input type="text" id="answer-input">`;
+        answerArea.innerHTML = `
+        <input
+            type="text" 
+            id="answer-input"
+            value="${answers[currentQuestion] || ""}">
+    `;
 
         //if the type of the current question is "radio", create a string of HTML that contains radio buttons for each option in the options array of the current question object. Each radio button will have the name "quiz-answer" and the value of the option. The label for each radio button will display the option text. Finally, set the innerHTML of the answerArea element to be this string of HTML, which will render the radio buttons for the user to select their answer.
     } else if (question.type === "radio") {
@@ -51,6 +56,19 @@ function renderInput(question) {
         });
 
         answerArea.innerHTML = html;
+
+        const savedAnswer = answers[currentQuestion];
+
+        //if there is a saved answer for the current question, find the radio button input element that has the same value as the saved answer and set its checked property to true.
+        if(savedAnswer) {
+            const radio = document.querySelector(
+                `input[name="quiz-answer"][value="${savedAnswer}"]`
+            );
+            //if a radio button with the saved answer value is found, set its checked property to true, which will select that radio button and display it as the user's previously saved answer.
+            if(radio) {
+                radio.checked = true;
+            }
+        }
     }
 };
 
@@ -60,7 +78,7 @@ renderQuestion();
 //save button logic
 const saveButton =
     document.getElementById("save-button");
-const answers = {}; 
+
 
 saveButton.addEventListener("click", saveQuestion);
 
