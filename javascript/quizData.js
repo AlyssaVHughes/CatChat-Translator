@@ -33,7 +33,7 @@ const questions = [
                     personality: "Food Goblin"}, 
         {   text: "Walks away unbothered",
                     personality: "Aloof Philosopher"}, 
-        {   text: "",
+        {   text: "Meows with gratitude",
                     personality: "Angel Child"}, 
         {   text: "Looks at you lovingly",
                     personality: "Sweetie"},   

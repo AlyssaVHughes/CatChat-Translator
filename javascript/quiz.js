@@ -40,7 +40,7 @@ function renderInput(question) {
         `;
         const submitButton = document.getElementById("submit-button-container");
         submitButton.addEventListener("click", submitQuiz);  
-
+        
         saveButton.style.display = "none";
 
     } else
@@ -59,10 +59,10 @@ function renderInput(question) {
     } else if (question.type === "radio") {
 
         let html = "";
+        let radioHtml = "";
 
-        //for each option in the options array of the current question object, append a label element containing a radio button input and the option text to the html string. The radio button will have the name "quiz-answer" and the value of the option.
         question.options.forEach(option => {
-            html += `
+            radioHtml += `
                 <label class="radio-option">
                     <input
                         type="radio"
@@ -71,11 +71,40 @@ function renderInput(question) {
                     ${option.text}
                 </label>
             `;
-        });
+        }); 
 
+        if (currentQuestion === 1) {
+
+            html = `
+                <div class="color-layout">
+        
+                    <div class="color-reference">
+                        <img src="../images/UI/Dark_color.png" alt="Dark">
+                        <img src="../images/UI/Burnt_color.png" alt="Burnt">
+                        <img src="../images/UI/Silver_color.png" alt="Silver">
+                        <img src="../images/UI/Light_color.png" alt="Light">
+                    </div>
+        
+                    <div class="radio-options">
+                        ${radioHtml}
+                    </div>
+        
+                </div>
+            `;
+        
+        } else {
+        
+            html = `
+                <div class="radio-options">
+                    ${radioHtml}
+                </div>
+            `;
+        
+        }
         answerArea.innerHTML = html;
 
         const savedAnswer = answers[currentQuestion];
+        saveButton.style.display = "block";
 
         //if there is a saved answer for the current question, find the radio button input element that has the same value as the saved answer and set its checked property to true.
         if(savedAnswer) {
@@ -195,9 +224,47 @@ function updateNavigation() {
 //submit button logic
 function submitQuiz() {
 
-    if (Object.keys(answers).length < questions.length) {
+    const scores = {
+        princess: 0,
+        shadow: 0,
+        gremlin: 0,
+        angel: 0
+    };
+
+    if (Object.keys(answers).length < questions.length - 1) {
         alert("Please answer all questions before submitting.");
+        console.log(Object.keys(answers).length, questions.length);
         return;
     }
-    console.log("Quiz submitted!", answers);
+    for (const answer of Object.values(answers)) {
+        scores[answer]++;
+    }
+    console.log(scores);
+
+    const winner = getWinner(scores);
+
+    console.log("Winner:", winner);
+    
+}
+
+function getWinner(scores) {
+    let winner = "";
+    let highestScore = 0;
+
+    //loop through each personality in the scores object
+    for (const personality in scores) {
+
+        //check if the score for the current personality in the loop is greater than the highest score found so far. 
+        if (scores[personality] > highestScore) {
+    
+            //if it is higher, update the highest score to be the score of the current personality and set the winner variable to be the current personality
+            highestScore = scores[personality];
+            winner = personality;
+    
+        }
+    
+    }
+//return the personality with the highest score as the winner of the quiz.
+    return winner;
+    console.log(`Winner: ${winner} with a score of ${highestScore}`);
 }
