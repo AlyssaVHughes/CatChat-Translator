@@ -225,10 +225,14 @@ function updateNavigation() {
 function submitQuiz() {
 
     const scores = {
-        princess: 0,
-        shadow: 0,
-        gremlin: 0,
-        angel: 0
+        'Princess': 0,
+        'Food Goblin': 0,
+        'Sweetie': 0,
+        'Aloof Philosopher': 0,
+        'Angel Child': 0,
+        'Gentlecat': 0,
+        'None': 0
+
     };
 
     if (Object.keys(answers).length < questions.length - 1) {
@@ -237,6 +241,7 @@ function submitQuiz() {
         return;
     }
     for (const answer of Object.values(answers)) {
+
         scores[answer]++;
     }
     console.log(scores);
@@ -244,6 +249,10 @@ function submitQuiz() {
     const winner = getWinner(scores);
 
     console.log("Winner:", winner);
+
+    console.log(`Winner: ${winner} with a score of ${highestScore}`);
+    sessionStorage.setItem("winner", winner);
+    window.location.href = "../html/result.html";
     
 }
 
@@ -266,5 +275,4 @@ function getWinner(scores) {
     }
 //return the personality with the highest score as the winner of the quiz.
     return winner;
-    console.log(`Winner: ${winner} with a score of ${highestScore}`);
 }
