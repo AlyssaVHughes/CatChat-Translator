@@ -28,6 +28,7 @@ const personalityText = document.getElementById("cat-personality");
 personalityText.textContent = "The " + winner;
 
 const catImage = document.getElementById("cat-result");
+const backgroundImage = document.getElementById("personality-background");
 
 const catImages = {
     Dark: {
@@ -67,7 +68,17 @@ const catImages = {
     }
 };
 
+const backgroundImages = {
+    "Angel Child": "../images/decor/angel_background.png",
+    "Aloof Philosopher": "../images/decor/book_background.png",
+    "Food Goblin": "../images/decor/food_background.png",
+    "Gentlecat": "../images/decor/food_background.png",
+    "Princess": "../images/decor/food_background.png",
+    "Sweetie": "../images/decor/sweetie_background.png"
+}
+
 catImage.src = catImages[catColor][winner];
+backgroundImage.src = backgroundImages[winner];
 
 const catDecor = { 
     
