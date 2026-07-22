@@ -1,5 +1,6 @@
 const welcomeText = document.getElementById("box-text");
 const resultText = document.getElementById("result-text");
+const blurbText = document.getElementById("blurb-text");
 
 if (welcomeText) {
     typeWriter(
@@ -10,5 +11,10 @@ if (welcomeText) {
     typeWriter(
         resultText,
         "Thats all I needed to hear. Ive already got Jerimiah figured out. Something is telling me they look a little something like this:"
+    );
+} else if (blurbText) {
+    typeWriter(
+        blurbText,
+        "What sound did your cat make?"
     );
 }
