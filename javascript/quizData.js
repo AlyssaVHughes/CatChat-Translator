@@ -11,13 +11,13 @@ const questions = [
         options: 
         [
             {   text: "Dark",
-                        personality: "None"}, 
+                        personality: "Dark"}, 
             {   text: "Burnt",
-                        personality: "None"}, 
+                        personality: "Burnt"}, 
             {   text: "Silver",
-                        personality: "None"}, 
+                        personality: "Silver"}, 
             {   text: "Light",
-                        personality: "None"}   
+                        personality: "Light"}   
                 ]
     },
     {
