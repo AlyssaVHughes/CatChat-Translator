@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page Title</title>
+    <script src="../javascript/dialogue.js" defer></script>
+    <script src="../javascript/welcomeText.js" defer></script>
+    <script src="../javascript/result.js" defer></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    <link rel="stylesheet" href="../css/questions.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/result.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Micro+5&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="layered-background">
+    <img class="background-layer" src="../images/decor/cloud_background.png" alt="Background Layer">
+    <div class="question-app">
+        <div class="question-header">
+            <div class="question-header-top">
+                <div class="header-home">
+                    <a href="../html/start.html">
+                        <img class="home-icon" src="../images/icons/home_icon.jpg" alt="Home Icon">
+                    </a>
+                </div>
+            </div>
+            <div class="question-header-shadow"></div>
+        </div>
+        <div class="home-main"> 
+            <img class="home-main-decor" src="../images/decor/quiz_decor.png" alt="Main Decor">
+            <div class="home-main-content">
+                <div class="text-box-container">
+                    <p id="result-text"></p>
+                    <img class="text-box" src="../images/UI/text_box.png" alt="Text Box">
+                </div>
+                <h1 id="cat-name" class="cat-name"></h1>
+                <h2 id="cat-personality" class="cat-personality">(Personality)</h2>
+                <div class="question-layers">
+                    <div class="question-background"> 
+                        <img class="quiz-background" src="../images/decor/quiz_background.png" alt="Question Image">
+                    </div>
+                    <img id="cat-result" class="quiz-character-a" src="../images/characters/angel_light.png" alt="Quiz Cat">
+                    <div class="sparkle-container">
+                        <img id="decorImg_1"  class="bg bg1" src="../images/decor/sparkle_1.png" alt="Catrina Decor">
+                        <img id="decorImg_2" class="bg bg2" src="../images/decor/sparkle_2.png" alt="Catrina Decor">
+                    </div>
+                </div>
+
+                <div class="yesno-container">
+
+                    <a href="../html/quiz.html" class="start-link">
+                        <div class="button-container">
+                            <img class="button" src="../images/buttons/button_e.png" alt="Start Button">
+                            <img class="button-hover" src="../images/buttons/button_e2.png">
+                            <h1 class="button-text">No</h1>
+                        </div>
+                    </a>
+
+                    <a href="../html/quiz.html" class="start-link">
+                        <div class="button-container">
+                            <img class="button" src="../images/buttons/button_f.png" alt="Start Button">
+                            <img class="button-hover" src="../images/buttons/button_f2.png">
+                            <h1 class="button-text">Yes</h1>
+                        </div>
+                    </a>
+
+                </div>
+
+            </div>
+            <img class="home-main-decor" src="../images/decor/quiz_decor.png" alt="Main Decor">
+        </div>
+    </div>
+</div>
+</body>
+
+</html>

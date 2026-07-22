@@ -247,11 +247,17 @@ function submitQuiz() {
     console.log(scores);
 
     const winner = getWinner(scores);
+    const catName = answers[0];
+    const catColor = answers[1];
 
     console.log("Winner:", winner);
+    console.log("Name:", catName);
+    console.log("Color:", catColor);
 
-    console.log(`Winner: ${winner} with a score of ${highestScore}`);
+    // console.log(`Winner: ${winner} with a score of ${highestScore}`);
     sessionStorage.setItem("winner", winner);
+    sessionStorage.setItem("catName", catName);
+    sessionStorage.setItem("catColor", catColor);
     window.location.href = "../html/result.html";
     
 }
