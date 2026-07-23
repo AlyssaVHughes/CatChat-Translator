@@ -1,18 +1,3 @@
-// function renderText() {
-//     //get the current question object from the questions array using the currentQuestionIndex variable.
-//     const current = questions[currentQuestionIndex];
-
-// //update the text content of the element with the id "question-title" to be the title of the current question object.
-// document.getElementById("result-text").textContent = current.title;
-
-// //use the typeWriter function to animate the question text in the element with the id "quiz-box-text". The text that will be animated is the question property of the current question object.
-// typeWriter(
-//     document.getElementById("quiz-box-text"),
-//     current.question
-// );
-
-// }
-
 const winner = sessionStorage.getItem("winner");
 const catName = sessionStorage.getItem("catName");
 const catColor = sessionStorage.getItem("catColor");
