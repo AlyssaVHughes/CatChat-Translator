@@ -46,6 +46,29 @@
     margin-right: 20px;
   }
 
+  .speech-bubble {
+    position: absolute;
+    z-index: 1;
+    top: 32%;
+    left: 35%;
+    /* transform: translateX(-50%); */
+    width: 320px;
+  }
+  .speech-text {
+    position: absolute;
+    z-index: 1;
+    top: 32%;
+    left: 40%;
+    /* transform: translateX(-50%); */
+    width: 280px;
+    font-family: "Micro 5", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
+    color: #918f68;
+    line-height: 15px;
+  }
+
   .background-header {
     background-color: #F4ECD0;
     height: 70px;

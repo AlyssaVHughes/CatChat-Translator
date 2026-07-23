@@ -10,7 +10,7 @@ if (welcomeText) {
 } else if (resultText) {
     typeWriter(
         resultText,
-        "Thats all I needed to hear. Ive already got Jerimiah figured out. Something is telling me they look a little something like this:"
+        "Thats all I needed to hear. Ive already got your cat all figured out. Something is telling me they look a little something like this:"
     );
 } else if (blurbText) {
     typeWriter(
