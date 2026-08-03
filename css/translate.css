@@ -1,6 +1,6 @@
 .blurb-container {
     background-color: #F4ECD0;
-    height: 30px;
+    height: 27px;
     padding: 12px 60px 15px 60px;
     display: flex;
     flex-direction: row;
@@ -57,7 +57,7 @@
   .speech-text {
     position: absolute;
     z-index: 1;
-    top: 32%;
+    top: 37%;
     left: 40%;
     /* transform: translateX(-50%); */
     width: 280px;
@@ -92,7 +92,7 @@
     height: 50px; 
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    gap: 19px;
     align-items: center;
     text-decoration: none;
   }
