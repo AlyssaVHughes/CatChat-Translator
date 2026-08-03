@@ -57,7 +57,7 @@ const backgroundImages = {
     "Angel Child": "../images/decor/angel_background.png",
     "Aloof Philosopher": "../images/decor/book_background.png",
     "Food Goblin": "../images/decor/food_background.png",
-    "Gentlecat": "../images/decor/food_background.png",
+    "Gentlecat": "../images/decor/study_background.png",
     "Princess": "../images/decor/food_background.png",
     "Sweetie": "../images/decor/sweetie_background.png"
 }
@@ -81,10 +81,14 @@ const catDecor = {
 
     heart: { decorA: "../images/decor/heart_1.png",
               decorB: "../images/decor/heart_2.png"},
+
+    
+    cloud: { decorA: "../images/decor/cloud_1.png",
+             decorB: "../images/decor/cloud_2.png"},
 }
 
 const personalityDecor = {
-    "Angel Child": "sparkle",
+    "Angel Child": "cloud",
     "Aloof Philosopher": "aloof",
     "Food Goblin": "food",
     "Gentlecat": "heart",

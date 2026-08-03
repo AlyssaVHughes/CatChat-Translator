@@ -12,7 +12,7 @@ const personalityResponses = {
             "Thank you for loving me. I'll love you forever, too."
         ],
         Mew: [
-            "1 Thank you for taking such good care of me.",
+            "Thank you for taking such good care of me.",
             "I got a tiny bit lonely. Will you keep me company?",
             "I have something very important to tell you... I love you!"
         ], 
