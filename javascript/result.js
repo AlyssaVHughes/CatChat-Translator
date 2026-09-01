@@ -58,7 +58,7 @@ const backgroundImages = {
     "Aloof Philosopher": "../images/decor/book_background.png",
     "Food Goblin": "../images/decor/food_background.png",
     "Gentlecat": "../images/decor/study_background.png",
-    "Princess": "../images/decor/food_background.png",
+    "Princess": "../images/decor/castle_background.png",
     "Sweetie": "../images/decor/sweetie_background.png"
 }
 
